@@ -21,7 +21,7 @@ services:
 startup: {type: form, module: Lists}
 package_name: Change_Notes
 allow_embedding: false
-name: Dev of Change Notes v 1.0 08-09-2023
+name: OldDev of Change Notes v 1.0 08-09-2023
 runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
 metadata: {title: Change Notes v 1.0 08-09-2023}
 db_schema:
