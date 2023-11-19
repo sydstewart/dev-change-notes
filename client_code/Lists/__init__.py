@@ -29,7 +29,7 @@ class Lists(ListsTemplate):
     user_type = anvil.users.get_user()['user_type']
     
     result = anvil.server.call('get_datetime')
-    self.repeating_panel_1.items = app_tables.change_notes.search(tables.order_by('change_date', ascending = False))
+    self.repeating_panel_1.items = app_tables.change_notes.search(tables.order_by('new_change_note_id', ascending = False))
     
     # self.repeating_panel_1.items = app_tables.change_notes.search()
     self.hits_textbox.text = len(app_tables.change_notes.search())
@@ -397,6 +397,17 @@ class Lists(ListsTemplate):
   
     
     pass
+
+  def sort_by_new_change_id_checkbox_change(self, **event_args):
+    """This method is called when this checkbox is checked or unchecked"""
+    if self.sort_by_new_change_id_checkbox.checked == True:
+              self.priority_sort_checkbox.checked = False
+              self.RPN_sort_checkbox.checked = False
+              self.pick_sort_chkbox.checked = False
+              self.change_note_date_search_chkbox.checked = False
+              self.repeating_panel_1.items = sorted([r for r in self.repeating_panel_1.items], key = lambda x: (x['new_change_note_id']), reverse=True )
+    else:
+              self.repeating_panel_1.items = sorted([r for r in self.repeating_panel_1.items], key = lambda x: (x['new_change_note_id']), reverse=False ) 
 
 
 
