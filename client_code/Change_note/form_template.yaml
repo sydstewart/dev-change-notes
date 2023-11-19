@@ -1,0 +1,855 @@
+container:
+  type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: large, spacing_above: small, col_widths: '{"XZKKQF":40,"UPJCIM":35,"GDUMWS":35,"SZBVRL":70,"MTVOAZ":55,"FALJXJ":5,"SCXHQU":55,"JIYUZK":5}',
+    spacing_below: small, background: ''}
+components:
+- type: Button
+  properties: {role: raised, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: Save, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: save_button
+  layout_properties: {grid_position: 'UYTVZQ,UEOHHO'}
+  event_bindings: {click: save_button_click}
+- type: Button
+  properties: {role: raised, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: Cancel, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: change_cancel_btn
+  layout_properties: {grid_position: 'UYTVZQ,KXHIMY'}
+  event_bindings: {click: change_cancel_btn_click}
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"DYXCRY":5,"KLSEZG":69,"IDXYLN":6,"MGZUZV":15,"MKOUGH":15,"VRHTAJ":20,"MWPKFI":40,"PLLNNZ":42,"WOPDTJ":10,"KGELWC":50,"EWPRAB":10,"ITTCDO":50,"MPMIRE":28}',
+    spacing_below: small, background: 'theme:Gray 200'}
+  name: column_panel_1
+  layout_properties: {grid_position: 'BHFKTX,XZKKQF', full_width_row: true}
+  components:
+  - type: Spacer
+    properties: {height: 665}
+    name: spacer_1
+    layout_properties: {grid_position: 'KHPKMU,DYXCRY'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: DEFINITION, font_size: 16, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_7
+    layout_properties: {grid_position: 'KHPKMU,KLSEZG ZGMKXH,TVUXJS'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Change Note ID, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'KHPKMU,KLSEZG YXXNMG,MGZUZV'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: false, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: 'theme:White', bold: false, underline: false}
+    name: text_box_1
+    layout_properties: {grid_position: 'KHPKMU,KLSEZG YXXNMG,PLLNNZ VAZJJI,VWMISK'}
+    data_bindings:
+    - {property: text, code: 'self.item[''new_change_note_id'']', writeback: true}
+    event_bindings: {pressed_enter: text_box_1_pressed_enter}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: false, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: old_change_nte_id
+    layout_properties: {grid_position: 'KHPKMU,KLSEZG YXXNMG,PLLNNZ PYVAYL,DXTSAG'}
+    data_bindings:
+    - {property: text, code: 'self.item[''change_note_id'']', writeback: false}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Create Date, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_2
+    layout_properties: {grid_position: 'KHPKMU,KLSEZG LHQCDE,MKOUGH'}
+  - type: DatePicker
+    properties: {role: null, align: left, max_date: '', pick_time: true, tooltip: '',
+      placeholder: '', border: '', enabled: true, foreground: '', visible: true, font_size: null,
+      font: '', spacing_above: small, spacing_below: small, italic: false, date: '',
+      min_date: '', background: '', bold: false, underline: false, format: 'DD/MM/YY  HH:SS'}
+    name: date_picker_1
+    layout_properties: {grid_position: 'KHPKMU,KLSEZG LHQCDE,MPMIRE'}
+    data_bindings:
+    - {property: date, code: 'self.item[''change_date'']', writeback: true}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '#db1a1a',
+      visible: true, text: Enter a Create Date, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: no_date_label
+    layout_properties: {grid_position: 'KHPKMU,KLSEZG NYXZYC,KEMEPU'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Title, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_3
+    layout_properties: {grid_position: 'KHPKMU,KLSEZG HELVRV,WOPDTJ'}
+  - type: TextArea
+    properties: {role: null, align: left, height: 54, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      auto_expand: false, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: 'theme:White', bold: false, underline: false}
+    name: text_area_1
+    layout_properties: {grid_position: 'KHPKMU,KLSEZG HELVRV,KGELWC'}
+    data_bindings:
+    - {property: text, code: 'self.item[''title'']', writeback: true}
+    event_bindings: {}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '#db1a1a',
+      visible: true, text: Enter a Title, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: no_title_label
+    layout_properties: {grid_position: 'KHPKMU,KLSEZG GFEMOO,ONBJYZ'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Descr., font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_4
+    layout_properties: {grid_position: 'KHPKMU,KLSEZG USXRLD,EWPRAB'}
+  - type: TextArea
+    properties: {role: null, align: left, height: 276, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      auto_expand: false, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: 'theme:White', bold: false, underline: false}
+    name: text_area_2
+    layout_properties: {grid_position: 'KHPKMU,KLSEZG USXRLD,ITTCDO'}
+    data_bindings:
+    - {property: text, code: 'self.item[''description'']', writeback: true}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Reported by Customer, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_5
+    layout_properties: {grid_position: 'KHPKMU,KLSEZG KLUEMK,VRHTAJ UYDPWE,MEFVUO'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Found in Version, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_6
+    layout_properties: {grid_position: 'KHPKMU,KLSEZG KLUEMK,VRHTAJ AVAZOC,TLZUJI'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: 'theme:White', bold: false, underline: false}
+    name: text_box_2
+    layout_properties: {grid_position: 'KHPKMU,KLSEZG KLUEMK,MWPKFI FJDTIT,DCUXYT'}
+    data_bindings:
+    - {property: text, code: 'self.item[''reported_by_customer'']', writeback: true}
+  - type: DropDown
+    properties:
+      role: null
+      align: full
+      tooltip: ''
+      placeholder: ''
+      border: ''
+      enabled: true
+      foreground: ''
+      items: []
+      visible: true
+      font_size: null
+      font: ''
+      spacing_above: small
+      spacing_below: small
+      italic: false
+      background: theme:White
+      bold: false
+      underline: false
+      include_placeholder: true
+    name: found_in_version_dropdown
+    layout_properties: {grid_position: 'KHPKMU,KLSEZG KLUEMK,MWPKFI OAXIGZ,DSWNAN'}
+    data_bindings:
+    - {property: selected_value, code: 'self.item[''found_in_version_no'']', writeback: true}
+  - type: CheckBox
+    properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+      foreground: '', allow_indeterminate: false, visible: true, text: Found in Last Two Years,
+      font_size: null, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: true, checked: false, underline: false}
+    name: check_box_1
+    layout_properties: {grid_position: 'KHPKMU,KLSEZG MLIKQT,DGPKRM'}
+    event_bindings: {change: check_box_1_change}
+    data_bindings:
+    - {property: checked, code: 'self.item[''found_in_last_two_years'']', writeback: true}
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_3
+    layout_properties: {grid_position: 'KHPKMU,IDXYLN', full_width_row: true}
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"GJEJDZ":9,"QNDKDY":62,"ADSKAM":9,"ECNCQE":25,"OWLNQM":25,"SUZYCF":35,"XKEBXB":25,"UBAPPU":35,"YZJDJS":25,"OXYVMZ":35,"ZJIWUN":20,"VLDXFG":25,"VMOATK":35,"LVNGGS":15,"RWSWEF":35}',
+    spacing_below: small, background: 'theme:Gray 200'}
+  name: column_panel_2
+  layout_properties: {grid_position: 'BHFKTX,UPJCIM QSUADB,SZBVRL'}
+  components:
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_4
+    layout_properties: {grid_position: 'AEHXEN,GJEJDZ'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: CLASSIFICATION, font_size: 16, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_8
+    layout_properties: {grid_position: 'AEHXEN,QNDKDY DWWXEP,HCZQEG'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Priority, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_9
+    layout_properties: {grid_position: 'AEHXEN,QNDKDY VCONNI,ECNCQE'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: true, underline: false}
+    name: priority_textbox
+    layout_properties: {grid_position: 'AEHXEN,QNDKDY VCONNI,QSOYTC'}
+    data_bindings:
+    - {property: text, code: 'self.item[''priority'']', writeback: true}
+    event_bindings: {change: priority_textbox_change}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Stage, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_10
+    layout_properties: {grid_position: 'AEHXEN,QNDKDY URGJPO,OWLNQM'}
+  - type: DropDown
+    properties:
+      role: null
+      align: full
+      tooltip: ''
+      placeholder: ''
+      border: ''
+      enabled: true
+      foreground: ''
+      items: [Submitted, Short Listed, Rejected, Under Development, Under Investigation,
+        Released, Reviewed, Archive, '', '']
+      visible: true
+      font_size: 14
+      font: ''
+      spacing_above: small
+      spacing_below: small
+      italic: false
+      background: theme:White
+      bold: false
+      underline: false
+      include_placeholder: true
+    name: stage_drop_down
+    layout_properties: {grid_position: 'AEHXEN,QNDKDY URGJPO,SUZYCF'}
+    data_bindings:
+    - {property: selected_value, code: 'self.item[''stage'']', writeback: true}
+    event_bindings: {change: stage_drop_down_change}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '#db1a1a',
+      visible: true, text: Select a Stage, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: no_stage_lbl
+    layout_properties: {grid_position: 'AEHXEN,QNDKDY RTDRVY,GZXQRB'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Safety Opr'tional, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_11
+    layout_properties: {grid_position: 'AEHXEN,QNDKDY RCUWSA,XKEBXB'}
+  - type: DropDown
+    properties:
+      role: null
+      align: full
+      tooltip: ''
+      placeholder: ''
+      border: ''
+      enabled: true
+      foreground: ''
+      items: [Safety, Operational]
+      visible: true
+      font_size: 14
+      font: ''
+      spacing_above: small
+      spacing_below: small
+      italic: false
+      background: theme:White
+      bold: false
+      underline: false
+      include_placeholder: true
+    name: tyype_drop_down
+    layout_properties: {grid_position: 'AEHXEN,QNDKDY RCUWSA,UBAPPU'}
+    data_bindings:
+    - {property: selected_value, code: 'self.item[''type'']', writeback: true}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '#df2a2a',
+      visible: true, text: Select Safety /Operational, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: true, underline: false, icon: ''}
+    name: no_type_label
+    layout_properties: {grid_position: 'AEHXEN,QNDKDY JVBYTC,JJLIMN'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Defect Imp'ment, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_12
+    layout_properties: {grid_position: 'AEHXEN,QNDKDY RDHOJP,YZJDJS'}
+  - type: DropDown
+    properties:
+      role: null
+      align: full
+      tooltip: ''
+      placeholder: ''
+      border: ''
+      enabled: true
+      foreground: ''
+      items: [Defect, Improvement]
+      visible: true
+      font_size: 14
+      font: ''
+      spacing_above: small
+      spacing_below: small
+      italic: false
+      background: theme:White
+      bold: false
+      underline: false
+      include_placeholder: true
+    name: class_drop_down
+    layout_properties: {grid_position: 'AEHXEN,QNDKDY RDHOJP,OXYVMZ'}
+    data_bindings:
+    - {property: selected_value, code: 'self.item[''classid'']', writeback: true}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '#d82222',
+      visible: true, text: Select Defect Improvement, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: no_class_lbl
+    layout_properties: {grid_position: 'AEHXEN,QNDKDY ZFOGQT,MESSVY'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Product Area, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_14
+    layout_properties: {grid_position: 'AEHXEN,QNDKDY FVRLGC,VLDXFG'}
+  - type: DropDown
+    properties:
+      role: null
+      align: full
+      tooltip: ''
+      placeholder: ''
+      border: ''
+      enabled: true
+      foreground: ''
+      items: [AC, SM, Common, Non-VKA, Interfaces]
+      visible: true
+      font_size: 14
+      font: ''
+      spacing_above: small
+      spacing_below: small
+      italic: false
+      background: theme:White
+      bold: false
+      underline: false
+      include_placeholder: true
+    name: product_area_drop_down
+    layout_properties: {grid_position: 'AEHXEN,QNDKDY FVRLGC,VMOATK'}
+    event_bindings: {change: product_area_drop_down_change}
+    data_bindings:
+    - {property: selected_value, code: 'self.item[''product_area'']', writeback: true}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '#e52424',
+      visible: true, text: Select a Product Area, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: no_product_area_lbl
+    layout_properties: {grid_position: 'AEHXEN,QNDKDY CWXXWE,PDCPGE'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: SELECT FUNCTION, font_size: 11, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_33
+    layout_properties: {grid_position: 'AEHXEN,QNDKDY TIYWBX,LVNGGS'}
+  - type: DropDown
+    properties:
+      role: null
+      align: full
+      tooltip: ''
+      placeholder: ''
+      border: ''
+      enabled: true
+      foreground: ''
+      items: []
+      visible: true
+      font_size: 14
+      font: ''
+      spacing_above: small
+      spacing_below: small
+      italic: false
+      background: ''
+      bold: false
+      underline: false
+      include_placeholder: true
+    name: function_drop_down
+    layout_properties: {grid_position: 'AEHXEN,QNDKDY TIYWBX,RWSWEF'}
+    data_bindings:
+    - {property: selected_value, code: 'self.item[''function'']', writeback: true}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '#c11a1a',
+      visible: true, text: Select a Function, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: no_function_lbl
+    layout_properties: {grid_position: 'AEHXEN,QNDKDY RABDYX,JGFXGO'}
+  - type: Button
+    properties: {role: null, align: left, tooltip: Add New Function, border: '', enabled: true,
+      foreground: '', visible: true, text: FUNCTION does not EXIST - ADD NEW, font_size: 11,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: true, underline: false, icon: 'fa:plus'}
+    name: add_function_button
+    layout_properties: {grid_position: 'AEHXEN,QNDKDY HDPMPT,THZNRC'}
+    event_bindings: {click: add_function_button_click}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Creator, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_13
+    layout_properties: {grid_position: 'AEHXEN,QNDKDY QVKCNH,ZJIWUN'}
+  - type: DropDown
+    properties:
+      role: null
+      align: full
+      tooltip: ''
+      placeholder: ''
+      border: ''
+      enabled: true
+      foreground: ''
+      items: []
+      visible: true
+      font_size: 14
+      font: ''
+      spacing_above: small
+      spacing_below: small
+      italic: false
+      background: theme:White
+      bold: false
+      underline: false
+      include_placeholder: true
+    name: user_drop_down
+    layout_properties: {grid_position: 'AEHXEN,QNDKDY QVKCNH,ZSRFVG'}
+    data_bindings:
+    - {property: selected_value, code: 'self.item[''user'']', writeback: true}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '#dd2222',
+      visible: true, text: Please enter a User, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: no_user_label
+    layout_properties: {grid_position: 'AEHXEN,QNDKDY EFAGXT,AWIQRK'}
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_5
+    layout_properties: {grid_position: 'AEHXEN,ADSKAM'}
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"NTMMAR":9,"XMTQBI":62,"GUEZLQ":9}',
+    spacing_below: small, background: 'theme:Gray 200'}
+  name: column_panel_5
+  layout_properties: {grid_position: 'BHFKTX,UPJCIM CKFJUI,MCDCKA'}
+  components:
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_6
+    layout_properties: {grid_position: 'EXSPXX,NTMMAR'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: IMPROVEMENT -  PICK, font_size: 16, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_16
+    layout_properties: {grid_position: 'EXSPXX,XMTQBI IMAMKK,QZOMUD'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Difficulty    10 = Easy, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_17
+    layout_properties: {grid_position: 'EXSPXX,XMTQBI DUPLWY,ERZNZY'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: number, spacing_below: small, italic: false,
+      background: 'theme:White', bold: false, underline: false}
+    name: difficulty_textbox
+    layout_properties: {grid_position: 'EXSPXX,XMTQBI DUPLWY,DZBLMG'}
+    event_bindings: {change: difficulty_textbox_change}
+    data_bindings:
+    - {property: text, code: 'self.item[''difficulty'']', writeback: true}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '#db1a1a',
+      visible: true, text: Please enter a Number between 1 and 10, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: true, underline: false, icon: ''}
+    name: diff_label
+    layout_properties: {grid_position: 'EXSPXX,XMTQBI DWCVOJ,KBCXNE'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: PayOff        10 = High, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_18
+    layout_properties: {grid_position: 'EXSPXX,XMTQBI KBSJCA,LWMZYG'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: number, spacing_below: small, italic: false,
+      background: 'theme:White', bold: false, underline: false}
+    name: payoff_textbox
+    layout_properties: {grid_position: 'EXSPXX,XMTQBI KBSJCA,RNIGNW'}
+    event_bindings: {change: payoff_textbox_change}
+    data_bindings:
+    - {property: text, code: 'self.item[''payoff'']', writeback: true}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '#db1a1a',
+      visible: true, text: Please enter a Number between 1 and 10, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: true, underline: false, icon: ''}
+    name: pay_label
+    layout_properties: {grid_position: 'EXSPXX,XMTQBI SEESWZ,WVHXFO'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: IPS, font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: true, underline: false,
+      icon: ''}
+    name: label_19
+    layout_properties: {grid_position: 'EXSPXX,XMTQBI SARNHM,KVWJYX'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: number, spacing_below: small, italic: false,
+      background: 'theme:White', bold: false, underline: false}
+    name: ips_textbox
+    layout_properties: {grid_position: 'EXSPXX,XMTQBI SARNHM,WIOMZE'}
+    data_bindings:
+    - {property: text, code: 'self.item[''ips'']', writeback: true}
+    event_bindings: {change: IPS_textbox_change}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: PICK, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_20
+    layout_properties: {grid_position: 'EXSPXX,XMTQBI LNDJWE,OMLZFH'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: 'theme:White', bold: false, underline: false}
+    name: pick_textbox
+    layout_properties: {grid_position: 'EXSPXX,XMTQBI LNDJWE,KZZOCP'}
+    data_bindings:
+    - {property: text, code: 'self.item[''pick'']', writeback: true}
+    event_bindings: {change: pick_textbox_change}
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_7
+    layout_properties: {grid_position: 'EXSPXX,GUEZLQ'}
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"WGEFJZ":7,"LSZKYQ":66,"HLNANB":7,"BUKIXD":15,"HRAKVB":45,"CTHXBI":15,"YWAFKZ":45,"KMUSVZ":30,"UEBGUT":30,"OQOYKA":30,"YRAXKE":30,"TPMMDL":30,"ZVZZNA":30,"CUAWOX":30,"KACVCK":30}',
+    spacing_below: small, background: 'theme:Gray 200'}
+  name: column_panel_6
+  layout_properties: {grid_position: 'BHFKTX,GDUMWS MDYKQV,MTVOAZ'}
+  components:
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_10
+    layout_properties: {grid_position: 'JRMBLB,WGEFJZ'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: SAFETY - FMEA, font_size: 16, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_25
+    layout_properties: {grid_position: 'JRMBLB,LSZKYQ LWDVST,EJTNSB', full_width_row: true}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Worst Case, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_27
+    layout_properties: {grid_position: 'JRMBLB,LSZKYQ DTFRHB,BUKIXD', full_width_row: true}
+  - type: TextArea
+    properties: {role: null, align: left, height: 52, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      auto_expand: false, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: 'theme:White', bold: false, underline: false}
+    name: worst_case_textbox
+    layout_properties: {grid_position: 'JRMBLB,LSZKYQ DTFRHB,HRAKVB', full_width_row: true}
+    data_bindings:
+    - {property: text, code: 'self.item[''worst_case'']', writeback: true}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Mitigations, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_28
+    layout_properties: {grid_position: 'JRMBLB,LSZKYQ NZKDLE,CTHXBI', full_width_row: true}
+  - type: TextArea
+    properties: {role: null, align: left, height: 87, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      auto_expand: false, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: 'theme:White', bold: false, underline: false}
+    name: mitigations_textbox
+    layout_properties: {grid_position: 'JRMBLB,LSZKYQ NZKDLE,YWAFKZ', full_width_row: true}
+    data_bindings:
+    - {property: text, code: 'self.item[''mitigations'']', writeback: true}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Severity, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_29
+    layout_properties: {grid_position: 'JRMBLB,LSZKYQ TZYWRP,KMUSVZ', full_width_row: true}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: number, spacing_below: small, italic: false,
+      background: 'theme:White', bold: false, underline: false}
+    name: severity_number
+    layout_properties: {grid_position: 'JRMBLB,LSZKYQ TZYWRP,UEBGUT', full_width_row: true}
+    data_bindings:
+    - {property: text, code: 'self.item[''severity'']', writeback: true}
+    event_bindings: {change: severity_number_change}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '#db1a1a',
+      visible: true, text: Please enter a Severity score between 1 and 10, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: true, underline: false, icon: ''}
+    name: no_severity_label
+    layout_properties: {grid_position: 'JRMBLB,LSZKYQ IBAHFZ,OODKAF'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Probability, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_31
+    layout_properties: {grid_position: 'JRMBLB,LSZKYQ YALUSW,OQOYKA'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: number, spacing_below: small, italic: false,
+      background: 'theme:White', bold: false, underline: false}
+    name: probability_number
+    layout_properties: {grid_position: 'JRMBLB,LSZKYQ YALUSW,YRAXKE'}
+    data_bindings:
+    - {property: text, code: 'self.item[''probability'']', writeback: true}
+    event_bindings: {change: probability_number_change}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '#db1a1a',
+      visible: true, text: Please enter a Probability score between 1 and 10, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: true, underline: false, icon: ''}
+    name: no_probability_label
+    layout_properties: {grid_position: 'JRMBLB,LSZKYQ AFQSXN,YBDDRT'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Visibility      1  = Obvious, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: true, underline: false, icon: ''}
+    name: label_30
+    layout_properties: {grid_position: 'JRMBLB,LSZKYQ SQLZCA,TPMMDL'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: number, spacing_below: small, italic: false,
+      background: 'theme:White', bold: false, underline: false}
+    name: visibility_number
+    layout_properties: {grid_position: 'JRMBLB,LSZKYQ SQLZCA,ZVZZNA'}
+    data_bindings:
+    - {property: text, code: 'self.item[''visibility'']', writeback: true}
+    event_bindings: {change: visibility_number_change}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '#db1a1a',
+      visible: true, text: Please enter a Visibility Score between 1 and 10, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: true, underline: false, icon: ''}
+    name: no_visibility_label
+    layout_properties: {grid_position: 'JRMBLB,LSZKYQ JKUXHH,NVKMKV'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: RPN, font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: true, underline: false,
+      icon: ''}
+    name: label_32
+    layout_properties: {grid_position: 'JRMBLB,LSZKYQ DTNUTU,CUAWOX'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: number, spacing_below: small, italic: false,
+      background: 'theme:White', bold: false, underline: false}
+    name: rpn_number
+    layout_properties: {grid_position: 'JRMBLB,LSZKYQ DTNUTU,KACVCK'}
+    data_bindings:
+    - {property: text, code: 'self.item[''rpn'']', writeback: true}
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_11
+    layout_properties: {grid_position: 'JRMBLB,HLNANB', full_width_row: true}
+- type: Spacer
+  properties: {height: 32}
+  name: spacer_12
+  layout_properties: {grid_position: 'BHFKTX,GDUMWS MDYKQV,FALJXJ'}
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"RVTWPQ":7,"CDQVCM":66,"FOZQMN":7,"CVXNUE":15,"ZTZLIV":45,"YDTUEP":20,"WYOZGR":40}',
+    spacing_below: small, background: 'theme:Gray 200'}
+  name: column_panel_3
+  layout_properties: {grid_position: 'BHFKTX,GDUMWS OOKLMI,SCXHQU'}
+  components:
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_8
+    layout_properties: {grid_position: 'HEBAAT,RVTWPQ'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: SOLUTION, font_size: 16, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_21
+    layout_properties: {grid_position: 'HEBAAT,CDQVCM TJIOIO,HTQPBU'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Due date, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_22
+    layout_properties: {grid_position: 'HEBAAT,CDQVCM TSKVLA,FXNUHR'}
+  - type: DatePicker
+    properties: {role: null, align: left, max_date: '', pick_time: true, tooltip: '',
+      placeholder: '', border: '', enabled: true, foreground: '', visible: true, font_size: null,
+      font: '', spacing_above: small, spacing_below: small, italic: false, date: '',
+      min_date: '', background: '', bold: false, underline: false, format: ''}
+    name: due_date
+    layout_properties: {grid_position: 'HEBAAT,CDQVCM TSKVLA,ZHMYUR'}
+    data_bindings:
+    - {property: date, code: 'self.item[''due_date'']', writeback: true}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Investigator, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_23
+    layout_properties: {grid_position: 'HEBAAT,CDQVCM MXXZFD,AAEYNK'}
+  - type: DropDown
+    properties:
+      role: null
+      align: full
+      tooltip: ''
+      placeholder: ''
+      border: ''
+      enabled: true
+      foreground: ''
+      items: []
+      visible: true
+      font_size: null
+      font: ''
+      spacing_above: small
+      spacing_below: small
+      italic: false
+      background: theme:White
+      bold: false
+      underline: false
+      include_placeholder: true
+    name: investigator_dropdown
+    layout_properties: {grid_position: 'HEBAAT,CDQVCM MXXZFD,BKQIRP'}
+    data_bindings:
+    - {property: selected_value, code: 'self.item[''investigator'']', writeback: true}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Possible Solution, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_24
+    layout_properties: {grid_position: 'HEBAAT,CDQVCM ZNVLXM,CVXNUE'}
+  - type: TextArea
+    properties: {role: null, align: left, height: 84, tooltip: '', placeholder: '',
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      auto_expand: false, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: 'theme:White', bold: false, underline: false}
+    name: possible_solution_textbox
+    layout_properties: {grid_position: 'HEBAAT,CDQVCM ZNVLXM,ZTZLIV'}
+    data_bindings:
+    - {property: text, code: 'self.item[''possible_solution'']', writeback: true}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Released in Version, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_26
+    layout_properties: {grid_position: 'HEBAAT,CDQVCM ANABBI,YDTUEP'}
+  - type: DropDown
+    properties:
+      role: null
+      align: full
+      tooltip: ''
+      placeholder: ''
+      border: ''
+      enabled: true
+      foreground: ''
+      items: []
+      visible: true
+      font_size: null
+      font: ''
+      spacing_above: small
+      spacing_below: small
+      italic: false
+      background: theme:White
+      bold: false
+      underline: false
+      include_placeholder: false
+    name: released_verision_no_dropdown
+    layout_properties: {grid_position: 'HEBAAT,CDQVCM ANABBI,WYOZGR'}
+    data_bindings:
+    - {property: selected_value, code: 'self.item[''released_in_version'']', writeback: true}
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_9
+    layout_properties: {grid_position: 'HEBAAT,FOZQMN'}
+- type: Spacer
+  properties: {height: 32}
+  name: spacer_2
+  layout_properties: {grid_position: 'BHFKTX,GDUMWS OOKLMI,JIYUZK'}
+- type: Button
+  properties: {role: raised, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: Save, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: bottom_save_btn
+  layout_properties: {grid_position: 'CWYUWB,TXUAIJ'}
+  event_bindings: {click: bottom_save_btn_click}
+- type: Button
+  properties: {role: raised, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: Cancel, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+    underline: false, icon: ''}
+  name: bottom_cancel
+  layout_properties: {grid_position: 'CWYUWB,INSWDA'}
+  event_bindings: {click: bottom_cancel_click}
+is_package: true

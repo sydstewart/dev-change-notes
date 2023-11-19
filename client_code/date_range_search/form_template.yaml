@@ -1,0 +1,28 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"RZBUAJ":10}'}
+components:
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Start Date >=, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  name: label_1
+  layout_properties: {grid_position: 'PDXWSR,RZBUAJ'}
+- type: DatePicker
+  properties: {}
+  name: date_start_picker
+  layout_properties: {grid_position: 'PDXWSR,PATTJG'}
+- type: Label
+  properties: {}
+  name: label_2
+  layout_properties: {grid_position: 'JGHGIB,WIALAF'}
+- type: DatePicker
+  properties: {}
+  name: date_picker_1
+  layout_properties: {grid_position: 'JGHGIB,APUYSL'}
+- type: TextBox
+  properties: {}
+  name: text_box_1
+  layout_properties: {grid_position: 'CPRCPG,SGOGNZ'}
+is_package: true

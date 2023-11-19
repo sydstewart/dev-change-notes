@@ -1,0 +1,577 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+  components:
+  - type: Button
+    properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:Primary 700', visible: true, text: Add New Change, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: 'theme:White', bold: false, underline: false, icon: ''}
+    name: add_change_button_top
+    layout_properties: {}
+    event_bindings: {click: add_change_button_click}
+  - type: Label
+    properties: {}
+    name: label_16
+    layout_properties: {}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: label_15
+    layout_properties: {expand: false, width: null}
+  - type: Button
+    properties: {role: secondary-color, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Log Out, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: log_out
+    layout_properties: {}
+    event_bindings: {click: log_out_click}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_3
+  layout_properties: {slot: left-nav}
+  components:
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Add New ChANGE, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: add_change_button
+    layout_properties: {grid_position: 'FOBZPN,LWLWFZ'}
+    event_bindings: {click: add_change_button_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Submitted in Last 90 days, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: submitted_in_last_90_days_tmn
+    layout_properties: {grid_position: 'BIQNDC,XTRZKL'}
+    event_bindings: {click: submitted_in_last_90_days_tmn_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Search Title or Description, font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: search_title_and_description
+    layout_properties: {grid_position: 'REHWEB,OOXBTB'}
+    event_bindings: {click: search_title_and_description_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Lists (Do not Use), font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: 'theme:White', bold: false, underline: false, icon: ''}
+    name: button_2
+    layout_properties: {grid_position: 'CBJTVM,HRDXFO'}
+    event_bindings: {click: button_2_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Load CSV (Do not Use), font_size: null,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: 'theme:White', bold: false, underline: false, icon: ''}
+    name: button_1
+    layout_properties: {grid_position: 'TOUCXO,TSZPKB'}
+    event_bindings: {click: button_1_click}
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  name: column_panel_1
+  layout_properties: {grid_position: 'TIHQAP,USYHIF', full_width_row: true, slot: default}
+  components:
+  - type: ColumnPanel
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: '#e8e8e8'}
+    name: card_1
+    layout_properties: {grid_position: 'WOHPCZ,GTOZSS', full_width_row: true}
+    components:
+    - type: ColumnPanel
+      properties: {col_widths: '{"QMCDFR":2,"RPZGPK":3,"QXTBJR":4,"FQXRVI":4,"MDFHVI":6,"CJKLMN":5,"BXRYEI":5,"AXETKK":5,"YBHHIF":10,"LHADXX":5,"TNYBIN":2,"ZIKZGY":8,"GDUDHR":8,"FRFTJW":2,"IXNVJM":2,"IRGJPW":3,"DBDYRZ":6,"RGOZCH":5,"HYYWDP":2,"MFYDET":6,"MFERCC":6,"OAMWKC":6,"WCKEUB":5,"ETIFJB":2,"TZDFYJ":3,"CZUMGF":5}'}
+      name: content_panel
+      layout_properties: {slot: default, grid_position: 'EBYAGG,DJKOYT', full_width_row: true}
+      components:
+      - type: Label
+        properties: {role: text, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: ENTER SEARCH CRITERIA, font_size: 14, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_2
+        layout_properties: {grid_position: 'IGSAKK,KRDYPZ', full_width_row: true}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: Stage, font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_3
+        layout_properties: {grid_position: 'FKNTLE,QMCDFR', full_width_row: true}
+      - type: DropDown
+        properties:
+          role: null
+          align: full
+          tooltip: ''
+          placeholder: ''
+          border: ''
+          enabled: true
+          foreground: ''
+          items: [Submitted, Short Listed, Rejected, Under Development, Under Investigation,
+            Released, Reviewed, Archive]
+          visible: true
+          font_size: 12
+          font: ''
+          spacing_above: small
+          spacing_below: small
+          italic: false
+          background: ''
+          bold: true
+          underline: false
+          include_placeholder: true
+        name: stage_search_dropdown
+        layout_properties: {grid_position: 'FKNTLE,MFYDET', full_width_row: true}
+        event_bindings: {change: stage_search_dropdown_change}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: 'Operational or Safety ', font_size: null, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false, icon: ''}
+        name: label_4
+        layout_properties: {grid_position: 'FKNTLE,RPZGPK', full_width_row: true}
+      - type: DropDown
+        properties:
+          role: null
+          align: full
+          tooltip: ''
+          placeholder: ''
+          border: ''
+          enabled: true
+          foreground: ''
+          items: [Safety, Operational]
+          visible: true
+          font_size: 12
+          font: ''
+          spacing_above: small
+          spacing_below: small
+          italic: false
+          background: ''
+          bold: true
+          underline: false
+          include_placeholder: true
+        name: search_type_drop_down
+        layout_properties: {grid_position: 'FKNTLE,QXTBJR', full_width_row: true}
+        event_bindings: {change: search_type_drop_down_change}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: Defect or Improvement, font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_6
+        layout_properties: {grid_position: 'FKNTLE,OAMWKC', full_width_row: true}
+      - type: DropDown
+        properties:
+          role: null
+          align: full
+          tooltip: ''
+          placeholder: ''
+          border: ''
+          enabled: true
+          foreground: ''
+          items: [Defect, Improvement]
+          visible: true
+          font_size: 12
+          font: ''
+          spacing_above: small
+          spacing_below: small
+          italic: false
+          background: ''
+          bold: true
+          underline: false
+          include_placeholder: true
+        name: search_class_drop_down
+        layout_properties: {grid_position: 'FKNTLE,FQXRVI', full_width_row: true}
+        event_bindings: {change: search_class_drop_down_change}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: Creator, font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_13
+        layout_properties: {grid_position: 'FKNTLE,IXNVJM', full_width_row: true}
+      - type: DropDown
+        properties:
+          role: null
+          align: full
+          tooltip: ''
+          placeholder: ''
+          border: ''
+          enabled: true
+          foreground: ''
+          items: []
+          visible: true
+          font_size: 12
+          font: ''
+          spacing_above: small
+          spacing_below: small
+          italic: false
+          background: ''
+          bold: true
+          underline: false
+          include_placeholder: true
+        name: search_creator_dropdown
+        layout_properties: {grid_position: 'FKNTLE,IRGJPW', full_width_row: true}
+        event_bindings: {change: search_creator_dropdown_change}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: Investigator, font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_17
+        layout_properties: {grid_position: 'FKNTLE,ETIFJB', full_width_row: true}
+      - type: DropDown
+        properties:
+          role: null
+          align: full
+          tooltip: ''
+          placeholder: ''
+          border: ''
+          enabled: true
+          foreground: ''
+          items: []
+          visible: true
+          font_size: 12
+          font: ''
+          spacing_above: small
+          spacing_below: small
+          italic: false
+          background: ''
+          bold: true
+          underline: false
+          include_placeholder: true
+        name: search_investigator_dropdown
+        layout_properties: {grid_position: 'FKNTLE,TZDFYJ', full_width_row: true}
+        event_bindings: {change: search_investigator_dropdown_change}
+      - type: CheckBox
+        properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+          foreground: '', allow_indeterminate: false, visible: true, text: Late, font_size: 14,
+          font: '', spacing_above: small, spacing_below: small, italic: false, background: '',
+          bold: true, checked: false, underline: false}
+        name: over_due_chkbox
+        layout_properties: {grid_position: 'FKNTLE,DBDYRZ', full_width_row: true}
+        event_bindings: {change: over_due_chkbox_change}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: Priority, font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: priority_search_label
+        layout_properties: {grid_position: 'FKNTLE,HYYWDP', full_width_row: true}
+      - type: DropDown
+        properties:
+          role: null
+          align: full
+          tooltip: ''
+          placeholder: ''
+          border: ''
+          enabled: true
+          foreground: ''
+          items: ['']
+          visible: true
+          font_size: 12
+          font: ''
+          spacing_above: small
+          spacing_below: small
+          italic: false
+          background: ''
+          bold: true
+          underline: false
+          include_placeholder: true
+        name: priority_search_dropdown
+        layout_properties: {grid_position: 'FKNTLE,RGOZCH', full_width_row: true}
+        event_bindings: {change: priority_search_dropdown_change}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: Old Change ID ( incl. Partial ) (Press enter), font_size: null,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '', bold: true, underline: false, icon: ''}
+        name: label_5
+        layout_properties: {grid_position: 'FKNTLE,MDFHVI', full_width_row: true}
+      - type: TextBox
+        properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+          border: '', enabled: true, foreground: '', visible: true, text: '', font_size: 12,
+          font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+          background: '', bold: true, underline: false}
+        name: id_search_textbox
+        layout_properties: {grid_position: 'FKNTLE,MFERCC', full_width_row: true}
+        event_bindings: {pressed_enter: id_search_textbox_pressed_enter}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: Product Area, font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_10
+        layout_properties: {grid_position: 'SZRHGJ,CJKLMN', full_width_row: true}
+      - type: DropDown
+        properties:
+          role: null
+          align: full
+          tooltip: ''
+          placeholder: ''
+          border: ''
+          enabled: true
+          foreground: ''
+          items: [AC, SM, Common, Non-VKA, Interfaces]
+          visible: true
+          font_size: 12
+          font: ''
+          spacing_above: small
+          spacing_below: small
+          italic: false
+          background: ''
+          bold: true
+          underline: false
+          include_placeholder: true
+        name: search_product_area_drop_down
+        layout_properties: {grid_position: 'SZRHGJ,BXRYEI', full_width_row: true}
+        event_bindings: {change: search_product_area_drop_down_change}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: Function, font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_8
+        layout_properties: {grid_position: 'SZRHGJ,AXETKK', full_width_row: true}
+      - type: DropDown
+        properties:
+          role: null
+          align: full
+          tooltip: ''
+          placeholder: ''
+          border: ''
+          enabled: true
+          foreground: ''
+          items: []
+          visible: true
+          font_size: 12
+          font: ''
+          spacing_above: small
+          spacing_below: small
+          italic: false
+          background: ''
+          bold: true
+          underline: false
+          include_placeholder: true
+        name: search_function_drop_down
+        layout_properties: {grid_position: 'SZRHGJ,YBHHIF', full_width_row: true}
+        event_bindings: {change: search_function_drop_down_change}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: Date Searches, font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_11
+        layout_properties: {grid_position: 'SZRHGJ,LHADXX', full_width_row: true}
+      - type: DropDown
+        properties:
+          role: null
+          align: full
+          tooltip: ''
+          placeholder: ''
+          border: ''
+          enabled: true
+          foreground: ''
+          items: [Last 90 Days, Today, This week, Last week, This Month, Last Month,
+            This Year, Last Year]
+          visible: true
+          font_size: 12
+          font: ''
+          spacing_above: small
+          spacing_below: small
+          italic: false
+          background: ''
+          bold: true
+          underline: false
+          include_placeholder: true
+        name: date_search_dropdown
+        layout_properties: {grid_position: 'SZRHGJ,WCKEUB', full_width_row: true}
+        event_bindings: {change: date_search_dropdown_change}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: Start Date, font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_7
+        layout_properties: {grid_position: 'SZRHGJ,TNYBIN', full_width_row: true}
+      - type: DatePicker
+        properties: {role: null, align: left, max_date: '', pick_time: true, tooltip: '',
+          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
+          font_size: 12, font: '', spacing_above: small, spacing_below: small, italic: false,
+          date: '', min_date: '', background: '', bold: true, underline: false, format: 'DD-MM-YYYY  HH:MM'}
+        name: start_date_picker
+        layout_properties: {grid_position: 'SZRHGJ,ZIKZGY', full_width_row: true}
+        event_bindings: {change: start_date_picker_change}
+      - type: Label
+        properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+          visible: true, text: End Date, font_size: null, font: '', spacing_above: small,
+          icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+          underline: false, icon: ''}
+        name: label_12
+        layout_properties: {grid_position: 'SZRHGJ,FRFTJW', full_width_row: true}
+      - type: DatePicker
+        properties: {role: null, align: left, max_date: '', pick_time: true, tooltip: '',
+          placeholder: '', border: '', enabled: true, foreground: '', visible: true,
+          font_size: 12, font: '', spacing_above: small, spacing_below: small, italic: false,
+          date: '', min_date: '', background: '', bold: true, underline: false, format: 'DD-MM-YYYY
+            HH:MM'}
+        name: end_date_picker
+        layout_properties: {grid_position: 'SZRHGJ,GDUDHR', full_width_row: true}
+        event_bindings: {change: end_date_picker_change}
+      - type: Button
+        properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+          foreground: '', visible: true, text: Clear Search Criteria, font_size: null,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '', bold: true, underline: false, icon: ''}
+        name: clear_search_criteria_button
+        layout_properties: {grid_position: 'SZRHGJ,CZUMGF', full_width_row: true}
+        event_bindings: {click: clear_search_criteria_button_click}
+  - type: ColumnPanel
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"RIXTIY":3,"BBFLFO":16,"SPQMVP":20}',
+      spacing_below: small, background: ''}
+    name: column_panel_2
+    layout_properties: {grid_position: 'QKUGGT,ANLQHJ', full_width_row: true}
+    components:
+    - type: Label
+      properties: {role: null, align: right, tooltip: '', border: '', foreground: '',
+        visible: true, text: Number of Changes Notes Found, font_size: null, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false, icon: ''}
+      name: label_1
+      layout_properties: {grid_position: 'ADJCUE,BBFLFO', full_width_row: true}
+    - type: TextBox
+      properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+        background: '', bold: true, underline: false}
+      name: hits_textbox
+      layout_properties: {grid_position: 'ADJCUE,RIXTIY', full_width_row: true}
+    - type: Label
+      properties: {}
+      name: label_9
+      layout_properties: {grid_position: 'ADJCUE,SPQMVP', full_width_row: true}
+  - type: CheckBox
+    properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+      foreground: '', allow_indeterminate: false, visible: true, text: sort by Change Note Date,
+      font_size: 12, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: true, checked: false, underline: false}
+    name: change_note_date_search_chkbox
+    layout_properties: {grid_position: 'KLCQAH,YKVZZO'}
+    event_bindings: {change: change_note_date_search_chkbox_change}
+  - type: CheckBox
+    properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+      foreground: '', allow_indeterminate: false, visible: true, text: sort by IPS,
+      font_size: 12, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: true, checked: false, underline: false}
+    name: ips_check_box
+    layout_properties: {grid_position: 'KLCQAH,TJYUAQ'}
+    event_bindings: {change: ips_check_box_change}
+  - type: CheckBox
+    properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+      foreground: '', allow_indeterminate: false, visible: true, text: sort by Priority,
+      font_size: 12, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: true, checked: false, underline: false}
+    name: priority_sort_checkbox
+    layout_properties: {grid_position: 'KLCQAH,JCDVOM'}
+    event_bindings: {change: priority_sort_checkbox_change}
+  - type: CheckBox
+    properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+      foreground: '', allow_indeterminate: false, visible: true, text: sort by PICK,
+      font_size: 12, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: true, checked: false, underline: false}
+    name: pick_sort_chkbox
+    layout_properties: {grid_position: 'KLCQAH,UAXMBN'}
+    event_bindings: {change: pick_sort_chkbox_change}
+  - type: CheckBox
+    properties: {role: null, align: left, tooltip: '', border: '', enabled: true,
+      foreground: '', allow_indeterminate: false, visible: true, text: sort by RPN,
+      font_size: 12, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: true, checked: false, underline: false}
+    name: RPN_sort_checkbox
+    layout_properties: {grid_position: 'KLCQAH,THUJKP'}
+    event_bindings: {change: RPN_sort_checkbox_change}
+  - type: CheckBox
+    properties: {role: null, align: left, tooltip: '', border: '', enabled: false,
+      foreground: '', allow_indeterminate: false, visible: false, text: sort by Due Date,
+      font_size: 12, font: '', spacing_above: small, spacing_below: small, italic: false,
+      background: '', bold: true, checked: false, underline: false}
+    name: due_date_sort_chkbox
+    layout_properties: {grid_position: 'KLCQAH,YGVJCV'}
+    event_bindings: {change: due_date_sort_chkbox_change}
+  - type: DataGrid
+    properties:
+      role: null
+      columns:
+      - {id: BNALZD, title: New Change ID, data_key: new_change_note_id, $$hashKey: 'object:374989',
+        width: '80'}
+      - {id: SUDNGE, title: Old Change ID, data_key: change_note_id, $$hashKey: 'object:60217',
+        width: '130'}
+      - {id: LGQKLC, title: Change Date, data_key: change_date, $$hashKey: 'object:60218',
+        width: '110'}
+      - {id: ZIWPGV, title: Title, data_key: title, width: 170, expand: false, $$hashKey: 'object:60219'}
+      - {id: LCUUMY, title: Product Area, data_key: product_area, $$hashKey: 'object:60220',
+        width: 81, expand: false}
+      - {id: NOOEGX, title: Function, data_key: function, $$hashKey: 'object:60221',
+        width: 136, expand: false}
+      - {id: ZUEUOI, title: Stage, data_key: stage, $$hashKey: 'object:60222', width: 134,
+        expand: false}
+      - {id: IXMJFN, title: Safety Operational, data_key: type, $$hashKey: 'object:60223',
+        width: '110'}
+      - {id: OKRRON, title: Defect Improvement, data_key: classid, $$hashKey: 'object:60224',
+        width: 109, expand: false}
+      - {id: FJLNPA, title: Priority, data_key: priority, $$hashKey: 'object:60225',
+        width: 69, expand: false}
+      - {id: GKQAOZ, title: IPS, data_key: ips, $$hashKey: 'object:60226', width: '40'}
+      - {id: ZHZCEQ, title: PICK, data_key: pick, $$hashKey: 'object:60227', width: '100'}
+      - {id: OTRITV, title: RPN, data_key: rpn, $$hashKey: 'object:60228', width: '40'}
+      - {id: XNVFXY, title: Due Date, data_key: due_date, width: '120', $$hashKey: 'object:60229'}
+      - {id: VOCBPZ, title: Creator, data_key: user, $$hashKey: 'object:683977', width: '80'}
+      - {id: MUBCDB, title: Investgtr, data_key: investigator, $$hashKey: 'object:22836',
+        width: '80'}
+      - {id: OMPHUL, title: Edit, data_key: column_1, $$hashKey: 'object:60230', width: 54,
+        expand: false}
+      - {id: XQCSZQ, title: Audit, data_key: column_3, $$hashKey: 'object:60232'}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 8
+      visible: true
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    name: data_grid_1
+    layout_properties: {grid_position: 'CAMXMU,VCHTQZ', full_width_row: true}
+    components:
+    - type: RepeatingPanel
+      properties: {spacing_above: none, spacing_below: none, item_template: Lists.RowTemplate1}
+      name: repeating_panel_1
+      layout_properties: {}
+    - type: form:LocalTZLabel
+      properties: {}
+      name: local_tz_label_1
+      layout_properties: {}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Change Notes System v1.0 08-09-2023, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: 'data:image/png;base64,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'}
+  name: label_14
+  layout_properties: {grid_position: 'WKAPQZ,KBYBQU', slot: title}

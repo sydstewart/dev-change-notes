@@ -1,0 +1,32 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: column_panel_1
+    layout_properties: {grid_position: 'SJJNCK,ENIIYY'}
+    components:
+    - type: DataGrid
+      properties:
+        columns:
+        - {id: FFTJFM, title: Column 1, data_key: column_1}
+        - {id: HATVDN, title: Column 2, data_key: column_2}
+        - {id: DKOZTT, title: Column 3, data_key: column_3}
+      name: data_grid_1
+      layout_properties: {grid_position: 'AFKNDJ,URPWVM'}
+      components:
+      - type: RepeatingPanel
+        properties: {spacing_above: none, spacing_below: none, item_template: Function_Report.RowTemplate2}
+        name: repeating_panel_1
+        layout_properties: {}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}

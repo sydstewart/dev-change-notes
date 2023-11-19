@@ -1,0 +1,86 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"BEYQIA":15,"SPWMPS":15,"LMIDIU":50}'}
+components:
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Change Note ID, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  name: label_1
+  layout_properties: {grid_position: 'ZOCIKQ,BEYQIA'}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: true, underline: false}
+  name: text_box_1
+  layout_properties: {grid_position: 'ZOCIKQ,SPWMPS'}
+  data_bindings:
+  - {property: text, code: 'self.item[''new_change_note_id'']', writeback: true}
+- type: Label
+  properties: {}
+  name: label_2
+  layout_properties: {grid_position: 'ZOCIKQ,LMIDIU'}
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: small, background: ''}
+  name: column_panel_1
+  layout_properties: {grid_position: 'EBASRB,VYCGQV', full_width_row: true}
+  components:
+  - type: DataGrid
+    properties:
+      role: null
+      columns:
+      - {id: OGMRXV, title: User, data_key: user_changed, $$hashKey: 'object:1084085',
+        width: 134, expand: false}
+      - {id: FLIACQ, title: When, data_key: when_changed, $$hashKey: 'object:1084087',
+        width: 117, expand: false}
+      - {id: UKYJLH, title: Stage, data_key: stage, $$hashKey: 'object:3856', width: 77,
+        expand: false}
+      - {id: OBNGRZ, title: Title, data_key: title, $$hashKey: 'object:1084083', width: 107,
+        expand: false}
+      - {id: KBKCYN, title: Description, data_key: description, $$hashKey: 'object:1083995',
+        width: '300'}
+      - {id: SRZHNO, title: Change Date, data_key: change_date, $$hashKey: 'object:26977',
+        width: '117', expand: false}
+      - {id: NQMFYS, title: Reported By, data_key: reported_by_customer, $$hashKey: 'object:193039',
+        width: '100'}
+      - {id: OIZESR, title: Found in, data_key: found_in_version_no, $$hashKey: 'object:193041',
+        width: '70'}
+      - {id: RAOCAL, title: Product Area, data_key: product_area, $$hashKey: 'object:537376',
+        width: '70'}
+      - {id: XXDUKL, title: Function, data_key: function, $$hashKey: 'object:537378',
+        width: '90'}
+      - {id: BBXNKD, title: Safety or Opera'al, data_key: type, $$hashKey: 'object:255531',
+        width: '90'}
+      - {id: UXOQKF, title: Defect of Impr'ment, data_key: classid, $$hashKey: 'object:255533',
+        width: '90'}
+      - {id: TRCTVS, title: Ease, data_key: difficulty, $$hashKey: 'object:474891',
+        width: '50'}
+      - {id: RQTZZN, title: Payoff, data_key: payoff, $$hashKey: 'object:474893',
+        width: '50'}
+      - {id: LSSUZH, title: IPS, data_key: ips, $$hashKey: 'object:474975', width: '50'}
+      - {id: GTZSXC, title: PICK, data_key: pick, $$hashKey: 'object:815', width: '100'}
+      - {id: VORFEE, title: See More of Audit Record, data_key: column_1, $$hashKey: 'object:2302',
+        width: '80'}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 20
+      visible: true
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    name: data_grid_2
+    layout_properties: {grid_position: 'OPOEJL,QDCNFK', full_width_row: true}
+    components:
+    - type: RepeatingPanel
+      properties: {spacing_above: none, spacing_below: none, item_template: audit_history.RowTemplate6}
+      name: repeating_panel_2
+      layout_properties: {}
+is_package: true

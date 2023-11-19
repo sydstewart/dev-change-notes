@@ -1,0 +1,96 @@
+container: {type: DataRowPanel}
+components:
+- type: Button
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: 'fa:pencil'}
+  name: button_1
+  layout_properties: {column: OMPHUL}
+  event_bindings: {click: button_1_click}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: 12,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: true, underline: false}
+  name: text_box_1
+  layout_properties: {column: FJLNPA}
+  data_bindings:
+  - {property: text, code: 'self.item[''priority'']', writeback: true}
+- type: Button
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: '', font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: 'fa:server'}
+  name: audit_history_button
+  layout_properties: {column: XQCSZQ}
+  event_bindings: {click: audit_history_button_click}
+- type: Button
+  properties: {role: null, align: center, tooltip: '', border: '', enabled: false,
+    foreground: '', visible: false, text: Stage History, font_size: null, font: '',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: '',
+    bold: false, underline: false, icon: ''}
+  name: edit_button
+  layout_properties: {column: null}
+  event_bindings: {click: edit_button_click}
+- type: DatePicker
+  properties: {role: null, align: left, max_date: '', pick_time: true, tooltip: '',
+    placeholder: '', border: '', enabled: false, foreground: '', visible: true, font_size: 12,
+    font: '', spacing_above: small, spacing_below: small, italic: false, date: '',
+    min_date: '', background: '', bold: true, underline: false, format: YYYY-MM-DD}
+  name: due_date_picker
+  layout_properties: {column: XNVFXY}
+  data_bindings:
+  - {property: date, code: 'self.item[''due_date'']', writeback: false}
+  event_bindings: {change: due_date_picker_change}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: 12,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: text_box_2
+  layout_properties: {column: LGQKLC}
+  data_bindings:
+  - {property: text, code: 'self.item[''change_date''] ', writeback: false}
+  event_bindings: {pressed_enter: text_box_2_pressed_enter}
+- type: TextArea
+  properties: {role: null, align: left, height: '', tooltip: '', placeholder: '',
+    border: '', enabled: false, foreground: '', visible: true, text: '', font_size: 12,
+    auto_expand: false, font: '', spacing_above: small, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: text_area_2
+  layout_properties: {column: SUDNGE}
+  data_bindings:
+  - {property: text, code: 'self.item[''change_note_id'']', writeback: false}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: 12,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: true, underline: false}
+  name: stage_textbox
+  layout_properties: {column: ZUEUOI}
+  data_bindings:
+  - {property: text, code: 'self.item[''stage'']', writeback: true}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: 12,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: type_textbox
+  layout_properties: {column: IXMJFN}
+  data_bindings:
+  - {property: text, code: 'self.item[''type'']', writeback: false}
+- type: Label
+  properties: {}
+  name: creator_label
+  layout_properties: {column: VOCBPZ}
+  data_bindings:
+  - {property: text, code: 'self.item[''user''][0:7]'}
+- type: Label
+  properties: {}
+  name: investigatr_label
+  layout_properties: {column: MUBCDB}
+  data_bindings:
+  - {property: text, code: 'self.item[''investigator''][0:7] if self.item[''investigator'']
+      else '''''}
+is_package: true

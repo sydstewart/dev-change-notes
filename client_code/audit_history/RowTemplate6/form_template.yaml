@@ -1,0 +1,84 @@
+container:
+  type: DataRowPanel
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', auto_display_data: true,
+    visible: true, font_size: 12, font: '', spacing_above: none, spacing_below: none,
+    italic: false, background: '', bold: false, underline: false}
+components:
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: 12,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: text_box_1
+  layout_properties: {column: FLIACQ}
+  data_bindings:
+  - {property: text, code: 'self.item[''when_changed''].strftime("%b %d %Y %I:%M %p") ',
+    writeback: false}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: '',
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: 12,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: text_box_2
+  layout_properties: {column: SRZHNO}
+  data_bindings:
+  - {property: text, code: 'self.item[''change_date''].strftime("%b %d %Y %I:%M %p") ',
+    writeback: false}
+  event_bindings: {pressed_enter: text_box_2_pressed_enter}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_1
+  layout_properties: {column: null}
+  components:
+  - type: DataGrid
+    properties:
+      role: null
+      columns:
+      - {id: GAUFAM, title: Severity, data_key: severity, $$hashKey: 'object:1564',
+        width: '100'}
+      - {id: JJNQGA, title: Probability, data_key: probability, $$hashKey: 'object:1565',
+        width: '100'}
+      - {id: PKPIST, title: Visibility, data_key: visibility, $$hashKey: 'object:1566',
+        width: '100'}
+      - {id: FEORJN, title: RPN, data_key: rpn, $$hashKey: 'object:1570', width: '80',
+        expand: false}
+      - {id: CLOPTB, title: Priority, data_key: priority, $$hashKey: 'object:1573',
+        width: '100'}
+      - {id: MOYPNE, title: Worst Case, data_key: worst_case, $$hashKey: 'object:1572',
+        width: 137, expand: false}
+      - {id: BUTGBU, title: Mitigatiions, data_key: mitigations, $$hashKey: 'object:1633',
+        width: '130'}
+      - {id: NZZZLM, title: Investigator, data_key: investigator, $$hashKey: 'object:11633',
+        width: '110'}
+      - {id: VMHRIT, title: Possible Solution, data_key: possible_solution, $$hashKey: 'object:11635',
+        width: '130'}
+      - {id: YRYKGW, title: Released In, data_key: released_in_version, $$hashKey: 'object:11637',
+        width: ''}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 20
+      visible: true
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    name: data_grid_1
+    layout_properties: {grid_position: 'VCNHZQ,XYZKCZ', full_width_row: true}
+    components:
+    - type: RepeatingPanel
+      properties: {spacing_above: none, spacing_below: none, item_template: audit_history.RowTemplate6.RowTemplate7}
+      name: repeating_panel_1
+      layout_properties: {}
+    data_bindings: []
+- type: Button
+  properties: {role: null, align: left, tooltip: '', border: '', enabled: true, foreground: '',
+    visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: 'fa:eye'}
+  name: button_1
+  layout_properties: {column: VORFEE}
+  event_bindings: {click: button_1_click}
+is_package: true
